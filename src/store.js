@@ -4,9 +4,9 @@ import {
   syncHistoryWithStore,
   routerMiddleware as createRouterMiddleware,
   push, replace, go, goBack, goForward,
-} from 'lib/react-router-redux/'
+} from './react-router-redux/'
 
-import rootReducer, { history } from './reducers/'
+import rootReducer, { history } from './reducer'
 
 const routerMiddleware = createRouterMiddleware(history)
 

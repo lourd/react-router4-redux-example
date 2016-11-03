@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Match, Link, StaticRouter } from 'react-router'
-import { push, replace } from 'lib/react-router-redux/'
+import { push, replace } from './react-router-redux/'
 
 
 function mapStateToProps(state) {
@@ -52,6 +52,13 @@ class App extends Component {
               return <h1>Bar!</h1>
             }} />
           </div>
+          <a
+            href="https://github.com/lourd/react-router4-redux-example"
+            target="_blank"
+            style={{ display: 'block' }}
+          >
+            Source code on GitHub
+          </a>
         </div>
       </StaticRouter>
     )
