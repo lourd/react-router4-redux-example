@@ -9,8 +9,6 @@ import rootReducer, { history } from './reducers/'
 
 const routerMiddleware = createRouterMiddleware(history)
 
-/* eslint no-underscore-dangle: ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }] */
-
 // Enhance createStore with middlewares. Order matters here
 const enhancedCreateStore = compose(
   applyMiddleware(routerMiddleware),
