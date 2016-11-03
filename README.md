@@ -4,10 +4,10 @@ An example for illustrating a possible technical direction for integrating [Redu
 ## Differences
 The modified version of `react-router-redux` is in `src/react-router-redux/`. The differences are in `reducer.js` and `sync.js`.
 
-### Reducer.js
-`reducer.js` exports a factory function `createReducer` that takes `history`. See [here](https://github.com/reactjs/react-router-redux/issues/454#issuecomment-258197584) for more explanation.
+### reducer.js
+`reducer.js` exports a factory function `createReducer` that takes `history`. The reducer needs access to the `history` instance so it can set its initial state properly.
 
-### Sync.js
+### sync.js
 Syncing the store with the history is now much simpler thanks to a one-way flow of state. It has an order of magnitude less code (~10 lines vs ~100 lines), and there's no more internal state. We simply subscribe to the history and dispatch an action to the store with the given `location` and `action`.
 
 ## Dev Instrumentation
