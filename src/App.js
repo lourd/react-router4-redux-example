@@ -32,6 +32,7 @@ class App extends Component {
         action={this.props.action}
         onPush={this.props.onPush}
         onReplace={this.props.onReplace}
+        basename="/react-router4-redux-example"
       >
         <div style={{ padding: 15, fontFamily: 'Helvetica, sans-serif' }}>
           <div><Link to="/">Home</Link></div>
