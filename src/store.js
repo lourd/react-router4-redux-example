@@ -3,6 +3,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import {
   syncHistoryWithStore,
   routerMiddleware as createRouterMiddleware,
+  push, replace, go, goBack, goForward,
 } from 'lib/react-router-redux/'
 
 import rootReducer, { history } from './reducers/'
@@ -20,9 +21,15 @@ const enhancedCreateStore = compose(
 // Create the store
 const store = enhancedCreateStore(rootReducer)
 
-// Expose dispatch globally for dev purposes
-window.dispatch = store.dispatch
-
 syncHistoryWithStore(history, store)
+
+// Expose these globally for dev purposes
+window.dispatch = store.dispatch
+window.h = history
+window.push = push
+window.replace = replace
+window.go = go
+window.goBack = goBack
+window.goForward = goForward
 
 export default store

@@ -8,5 +8,6 @@ The modified version of `react-router-redux` is in `src/lib/`. The difference is
 I've instrumented the app with a few handy hooks for playing with the app state:
 
 - `dispatch` - the store's dispatch is available globally as `dispatch`
-- `history` - the history instance is available globally as `h`
+- Router redux actions - the router redux action creators (`push`, `replace`, `go`, `goBack`, & `goForward`) are available globally. Try something like `dispatch(push('/bar'))` or `dispatch(goBack())`.
+- `history` - the history instance is available globally as `h`. Try something like `h.push('/foo')`.
 - Redux Dev Tools - the store is instrumented to [dev tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) so you can play around with time travel debugging
