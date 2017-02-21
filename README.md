@@ -1,4 +1,8 @@
-# [React Router v4](https://react-router.now.sh) w/ [React Router Redux](https://github.com/reactjs/react-router-redux) Demo
+# *Deprecated*
+React Router's API changed between the v4 alphas and the release version, making this code irrelevant. If you're looking for Redux-React Router v4 bindings I recommend checking out [Connected React Router](https://github.com/supasate/connected-react-router).
+
+---
+# [React Router v4](https://reacttraining.com/react-router/) w/ [React Router Redux](https://github.com/reactjs/react-router-redux) Demo
 An example for illustrating a possible technical direction for integrating [Redux](http://redux.js.org) & React Router v4.
 
 ## Differences
